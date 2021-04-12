@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.header {
+    position: absolute;
+    width: 65%;
+    display: flex;
+    padding: 1rem 1.5rem;
+}
+.header i {
+    color: blanchedalmond;
+    font-size: 2rem;
+    text-shadow: 0 0 8px rgb(45, 241, 255);
+    transition: all 0.3s ease-in-out;
+}
+.header i:hover {
+    cursor: pointer;
+    text-shadow: 0 0 8px rgb(216, 255, 45);
+    transform: rotate(30deg) scale(1.1);
+}
+
+#select-zone {
+    display: flex;
+    width: 65%;
+    background-color: rgb(1, 0, 68);
+    justify-content: space-around;
+    align-items: center;
+}
+.item-container {
+    position: relative;
+    width: 45%;
+    height: 300px;
+}
+.item-container .description {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 29, 73);
+    transition: all 0.5s ease-in-out;
+    top:0;
+}
+.item-container .description textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.25rem;
+    color: blanchedalmond;
+    font-size: 1.25rem;
+    background-color: rgb(0, 29, 73);
+    text-decoration: none;
+    resize: none;
+}
+.item-container:hover .description{
+    top: 50px;
+    box-shadow: 0 0 16px rgb(0, 55, 119);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.item-container:hover .select-item{
+    top: -50px;
+    background: rgb(0, 18, 59);
+    font-size: 3.1rem;
+    box-shadow: 0 0 16px rgb(0, 55, 119);
+}
+.select-item {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 9, 32);
+    font-size: 3rem;
+    text-align: center;
+    line-height: 300px;
+    transition: all 0.25s ease-in-out;
+    border-radius: 2px;
+    top:0;
+    text-shadow: 0 0 8px rgb(216, 255, 45);
+
+}
+
+#leaderboard-zone {
+    padding: 6.5rem 3rem;
+    width: 40%;
+    background-color: rgb(0, 14, 39);
+    color: blanchedalmond;
+}
+#leaderboard-zone .title {
+    color: blanchedalmond;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 8px rgb(45, 45, 255);
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+.leaderboard-item:hover {
+    background-color: rgb(0, 55, 119);
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 0 4px rgb(1, 77, 163);
+
+}
+.leaderboard-item .item-name {
+    width: 40%;
+}
+.leaderboard-item .item-elo {
+    width: 20%;
+    text-align: right;
+}
+.leaderboard-item .item-win-count {
+    width: 20%;
+    text-align: right;
+}
+.leaderboard-item .item-lose-count {
+    width: 20%;
+    text-align: right;
+}
+
+
+.item-elo i {
+    color: rgb(235, 204, 30);
+}
+.item-win-count i {
+    color: rgb(77, 255, 77);
+}
+.item-lose-count i {
+    color: rgb(251, 31, 31);
+}

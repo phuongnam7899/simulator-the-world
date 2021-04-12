@@ -1,0 +1,70 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#timer-container {
+    width: fit-content;
+    height: fit-content;
+    background: rgb(6, 47, 61);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgb(15, 29, 228);
+}
+
+#time-value {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: wheat;
+    flex-grow: 3;
+    margin-right: 2rem;
+    box-shadow: 0 0 4px rgb(3, 206, 206);
+    background-color: teal;
+    height: 120px;
+    line-height: 120px;
+    padding: 0 1rem;
+    text-shadow: 0 0 8px rgb(149, 255, 255);
+    border-radius: 2px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 1.75rem;
+    color: wheat;
+    align-items: flex-end;
+}
+.button {
+    margin: 0.25rem 0;
+    text-shadow: 0 0 8px teal;
+}
+.button:hover {
+   cursor: pointer;
+   color: rgb(243, 214, 160);
+}
+
+#records {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.record-item {
+    color: wheat;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}

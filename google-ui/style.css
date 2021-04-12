@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logic {
+    width: 272px;
+    height: 92px;
+}
+.search-box {
+    position: relative;
+    margin: 2rem 0;
+}
+.search-box input {
+    width: 561px;
+    height: 44px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px rgb(228, 228, 228);
+    border-radius: 22px;
+    padding-left: 3.5rem;
+    font-size: 1.1rem;
+}
+.search-box i {
+    position: absolute;
+    color: grey;
+    font-size: 1.25rem;
+}
+.search-box .fa-search {
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+}
+.search-box .fa-microphone-alt {
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+.shortcuts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 25%;
+}
+.shortcuts .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 112px;
+    height: 112px;
+    text-decoration: none;
+    color: #000;
+}
+.shortcuts .item:hover {
+    cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+.shortcuts .item img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+

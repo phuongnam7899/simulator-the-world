@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="common.css" />
+    <script
+      src="https://kit.fontawesome.com/b57d63ef91.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="flex">
+    <div id="nav" class="flex-column">
+      <div class="flex-column">
+        <div class="avatar">
+          <img
+            class="full-size round"
+            src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+            alt=""
+          />
+        </div>
+        <div class="menu flex-column">
+          <div class="menu-item flex-center">
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          <div class="menu-item flex-center">
+            <i class="fas fa-address-book"></i>
+          </div>
+          <div class="menu-item flex-center">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="menu-item flex-center">
+            <i class="fas fa-check-square"></i>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-item flex-center">
+          <i class="fas fa-file-import"></i>
+        </div>
+        <div class="menu-item flex-center">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="menu-item flex-center">
+          <i class="fas fa-cog"></i>
+        </div>
+      </div>
+    </div>
+    <div id="conversation" class="flex-column">
+      <div class="header">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" />
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-user-plus"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+      <div class="section-header">Category</div>
+      <div class="tags">
+        <div class="tag">All</div>
+        <div class="tag">Family</div>
+        <div class="tag">Friends</div>
+        <div class="tag">Work</div>
+        <div class="tag">Students</div>
+        <div class="tag">Colleague</div>
+      </div>
+      <div class="divider"></div>
+      <div class="section-header">
+        <div class="title">Messages</div>
+        <div class="sub-title">Mark ass read</div>
+      </div>
+      <div class="conversations-list flex-column">
+        <div class="conversation-item flex">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/originals/8d/d8/f0/8dd8f0f7ac6ac570e6d1be3ba11f8dac.jpg"
+              alt=""
+            />
+          </div>
+          <div class="conversation-info">
+            <div class="flex-between">
+              <div class="name">Ngai</div>
+              <div class="time">10 min</div>
+            </div>
+            <div class="latest-message">You: i love u</div>
+            <div class="conversation-tag">
+              <i class="fas fa-tag"></i>
+              Family
+            </div>
+          </div>
+        </div>
+        <div class="conversation-item flex">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+          </div>
+          <div class="conversation-info">
+            <div class="flex-between">
+              <div class="name">Chicken Fake</div>
+              <div class="time">2 days</div>
+            </div>
+            <div class="latest-message">You: dumami</div>
+            <div class="conversation-tag">
+              <i class="fas fa-tag"></i>
+              Friends
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="selected-conversation" class="flex-column">
+      <div class="header">
+        <div class="receiver">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex-column info">
+            <div class="name">Ngai</div>
+            <div>Online 5 hours ago</div>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="helper-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="helper-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="helper-icon">
+            <i class="fas fa-columns"></i>
+          </div>
+        </div>
+      </div>
+      <div class="messages">
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+        <div class="message">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox</div>
+        </div>
+        <div class="message flex-revert">
+          <div class="avatar">
+            <img
+              class="full-size round"
+              src="https://i.pinimg.com/474x/22/cf/18/22cf1860d63168a0c83da06166768117.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox hello fox</div>
+        </div>
+      </div>
+      <div class="flex helper-icons">
+        <div class="helper-icon">
+          <i class="fas fa-icons"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-image"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-paperclip"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="far fa-object-ungroup"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-address-card"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-stopwatch"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-check-square"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-pen-alt"></i>
+        </div>
+        <div class="helper-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+      </div>
+      <div class="typing-zone flex">
+        <input placeholder="Typing here..." type="text">
+        <div class="flex">
+          <div class="helper-icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <div class="helper-icon">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <div class="helper-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

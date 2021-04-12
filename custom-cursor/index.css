@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header {
+    margin-bottom: 1rem;
+}
+#cursor-select {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.select-item {
+    width: 75px;
+    height: auto;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.select-item:hover {
+    box-shadow: 0 0 4px rgb(202, 202, 202);
+}
