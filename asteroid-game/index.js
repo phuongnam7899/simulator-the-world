@@ -1,6 +1,23 @@
 function setup() {
-    createCanvas(window.innerWidth - 20, window.innerHeight - 20);
+  createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
 }
+const keysPressing = [];
+function initGameObjects() {
+    GameObject.recycle('Player');
+    GameObject.recycle('Enemy');
+}
+initGameObjects();
 function draw() {
-    background(220);
+  background('#000')
+  GameObject.runAll();
+  GameObject.renderAll();
+}
+function keyPressed() {
+  if (!keysPressing.includes(key)) keysPressing.push(key);
+}
+function keyReleased() {
+    if (keysPressing.includes(key)) {
+        const keyIndex = keysPressing.indexOf(key);
+        keysPressing.splice(keyIndex, 1)
+    }
 }
