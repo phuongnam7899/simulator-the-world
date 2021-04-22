@@ -4,11 +4,11 @@ function setup() {
 const keysPressing = [];
 function initGameObjects() {
     GameObject.recycle('Player');
-    GameObject.recycle('Enemy');
+    GameObject.recycle('EnemySummoner');
 }
 initGameObjects();
 function draw() {
-  background('#000')
+  background('#000');
   GameObject.runAll();
   GameObject.renderAll();
 }
@@ -18,6 +18,6 @@ function keyPressed() {
 function keyReleased() {
     if (keysPressing.includes(key)) {
         const keyIndex = keysPressing.indexOf(key);
-        keysPressing.splice(keyIndex, 1)
+        keysPressing.splice(keyIndex, 1);
     }
 }

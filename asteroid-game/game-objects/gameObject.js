@@ -16,7 +16,7 @@ class GameObject {
   static recycle(className) {
     const recyclableObject = GameObject.findInactive(className);
     if (!!recyclableObject) {
-      recyclableObject.reactive();
+      recyclableObject.activate();
       return recyclableObject;
     } else {
       return new DynamicClass(className);
@@ -62,28 +62,54 @@ class GameObject {
     }
   }
 
+  // deactive selected game object
+  static deactiveSelected = (objects) => {
+    for (let object of objects) {
+      object.deactivate();
+    }
+  };
+
   // Find object in a class that intersect with given
   static findIntersected = (className, gameObject) => {
-    const intersectedObjects = GameObject.gameObjects.filter((object) => {
-      return (
-        object.isActive &&
-        object.constructor.name === className &&
-        object.boxColider.intersected(gameObject.boxColider)
-      );
-    });
+    const intersectedObjects = GameObject.findObjectOfClass(className).filter(
+      (object) => {
+        return (
+          object.isActive &&
+          object.boxColider.intersected(gameObject.boxColider)
+        );
+      }
+    );
     return intersectedObjects;
   };
 
   constructor() {
-    this.position = new Vector2D(200, 200);
-    this.velocity = new Vector2D(10, 0);
+    this.position = new Vector2D(0, 0);
+    this.velocity = new Vector2D(0, 0);
+    this.accelerate = new Vector2D(0, 0);
+    this.velocityCounter = new FrameCounter(3);
+    this.friction = 0;
     this.isActive = true;
     this.anchor = new Vector2D(0.5, 0.5);
     GameObject.addNew(this);
   }
-  
+
   run() {
+    if (this.velocityCounter.run()){
+      this.velocity.add(this.accelerate);
+      this.velocityCounter.reset();
+      this.frictionApply();
+    }
     this.position.add(this.velocity);
+    if (this.boxColider) this.boxColider.position.set(this.position);
+  }
+
+  frictionApply () {
+    if (this.friction > 0) {
+      const oldVelocityLength = this.velocity.getLength();
+      if (oldVelocityLength) {
+        this.velocity.setLength(Math.max(0, oldVelocityLength - this.friction));
+      }
+    }
   }
   render() {
     this.renderer.render(this);
@@ -91,7 +117,7 @@ class GameObject {
   activate() {
     this.isActive = true;
   }
-  deactvate() {
+  deactivate() {
     this.isActive = false;
   }
 }

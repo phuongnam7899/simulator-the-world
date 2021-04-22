@@ -1,7 +1,8 @@
 class BoxColider {
   constructor(gameObject, width, height) {
-    this.position = gameObject.position; // Vector2D
-    (this.width = width), (this.height = height);
+    this.position= new Vector2D(gameObject.position.x, gameObject.position.y); // Vector2D
+    this.width = width;
+    this.height = height;
     this.anchor = gameObject.anchor; // Vector2D
   }
   top() {
