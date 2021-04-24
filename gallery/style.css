@@ -37,7 +37,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 6rem;
+    font-size: 5rem;
     color: rgb(255, 38, 38);
 }
 #gallery-container .galery-item img {
