@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script
+      src="https://kit.fontawesome.com/b57d63ef91.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calendar-container">
+      <div class="header">
+        <div>
+          <i class="fas fa-angle-left" id="prev-btn"></i>
+          <span id="month-year">AUG 2021</span>
+          <i class="fas fa-angle-right" id="next-btn"></i>
+        </div>
+      </div>
+      <div class="days">
+        <div class="day-name">SUN</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">TUE</div>
+        <div class="day-name">WED</div>
+        <div class="day-name">THU</div>
+        <div class="day-name">FRI</div>
+        <div class="day-name">SAT</div>
+      </div>
+      <div id="calendar-content"></div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
