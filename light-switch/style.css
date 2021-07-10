@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #202224;
+}
+
+#light-bulb {
+    font-size: 10rem;
+    color: rgb(238, 238, 238);
+    margin-bottom: 2rem;
+}
+#light-bulb.on {
+    color: white;
+    text-shadow: 0 0 50px rgb(148, 248, 255);
+}
+#switch i {
+    font-size: 4rem;
+    color: thistle;
+    cursor: pointer;
+}
